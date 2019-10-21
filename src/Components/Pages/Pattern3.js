@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react'
 
+const myStyle = {
+    examples: { 
+        border: '2px solid black',
+        padding: '20px',
+        marginBottom: '10px'
+    },
+    infoText: {
+        maxWidth: '70%' 
+    }
+}
+
 export const Pattern3 = (props) => {
 
     const [count, setCount] = useState(props.currentCount);
@@ -16,9 +27,15 @@ export const Pattern3 = (props) => {
     console.log("rendered again")
     return (
         <React.Fragment>
-            <h1>Demo of the useState as well as useEffect hook</h1>
-            <p>{count}</p>
-            <p>{props.currentCount}</p>
+            <section style={myStyle.infoText}>
+                <h1>A final example/demo/pattern of the useState and useEffect hook</h1>
+                <p>
+                    This example is similar to pattern 1, but instead of setting the internal state: count to 0 when props.currentCount changes
+                    we set the internal state count to the value of props.currentCount.
+                </p>
+            </section>
+            <p>Component level counter: {count}</p>
+            <p>Counter passed down from our App state: {props.currentCount}</p>
             <button onClick={() => {handleIncrease()}}>increase</button>
             <button onClick={() => {props.onCountSubmit(count)}}>submit to parent</button>
         </React.Fragment>
