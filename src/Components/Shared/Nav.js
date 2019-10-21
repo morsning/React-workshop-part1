@@ -24,6 +24,12 @@ export const Nav = props => {
                         <Link to={'/'}>Part 1</Link>
                     </li>
                     <li style={myStyle.li}>
+                        <Link to={'/CCompDemo1'}>Class-comp-lifecycle</Link>
+                    </li>
+                    <li style={myStyle.li}>
+                        <Link to={'/more-reuse'}>More reuse</Link>
+                    </li>
+                    <li style={myStyle.li}>
                         <Link to={'/pattern1'}>Func-comp-pattern-1</Link>
                     </li>
                     <li style={myStyle.li}>

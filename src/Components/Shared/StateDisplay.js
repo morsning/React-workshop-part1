@@ -20,6 +20,8 @@ export const StateDisplay = props => {
                 <p>Number of component re-renders:</p>
                 <ul>
                     <li>inputLab: {props.stats.inputLab}</li>
+                    <li>inputLab 2: {props.stats.inputLab2}</li>
+                    <li>inputLab 3: {props.stats.inputLab3}</li>
                     <li>func-comp-pattern: {props.stats.about}</li>
                 </ul>
             </article>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-class InputLab2 extends React.Component {
+class InputLab3 extends React.Component {
 
     state = {
         someValue: ''
@@ -27,11 +27,11 @@ class InputLab2 extends React.Component {
                     />
                     <input type="submit" value="Submit" />
                 </form>
-                <p>Component level state:</p>
+                {this.props.children}
                 <p>{this.state.someValue}</p>
             </React.Fragment>
         )
     }
 }
 
-export default InputLab2
+export default InputLab3
