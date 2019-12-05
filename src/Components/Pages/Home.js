@@ -57,13 +57,13 @@ export const Home = (props) => {
                 <p>
                     Example demonstrating the HOC-pattern
                 </p>
-                <InputLabColorWithCE />
+                <InputLabColorWithCE onInputSubmit={props.onInputSubmit}/>
             </section>
             <section style={myStyle.examples}>
                 <p>
                     Example demonstrating the Render Props pattern
                 </p>
-                <ColorEnhanced render={({ colors }) => <InputLabColor colors={colors} />} />
+                <ColorEnhanced render={({ colors }) => <InputLabColor colors={colors} onInputSubmit={props.onInputSubmit}/>} />
             </section>
             <section style={myStyle.examples}>
                 <p>The render props pattern demonstrated above can be improved further.
@@ -73,13 +73,13 @@ export const Home = (props) => {
                     When using this component in order to render the component we which to enhance we can destructure the property we are interested in and pass that reference to our colors prop.
                     Here we are passing a reference to a function that in contrast to the function passed above gives us a larger border.
                 </p>
-                <ColorEnhanced render={({ colorsBB }) => <InputLabColor colors={colorsBB} />} />
+                <ColorEnhanced render={({ colorsBB }) => <InputLabColor colors={colorsBB} onInputSubmit={props.onInputSubmit}/>} />
             </section>
             <section style={myStyle.examples}>
                 <p>
                     Example of a slightly different component re-using the same logic through the Render Props pattern.
                 </p>
-                <ColorEnhanced render={({ colors }) => <InputLabColor2 colors={colors} />} />
+                <ColorEnhanced render={({ colors }) => <InputLabColor2 colors={colors} onInputSubmit={props.onInputSubmit}/>} />
             </section>
         </React.Fragment>
     )

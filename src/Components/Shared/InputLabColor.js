@@ -15,6 +15,7 @@ class InputLabColor extends React.Component {
 
     handleFormSubmit(event) {
         event.preventDefault();
+        this.props.onInputSubmit(this.state.someValue)
     }
 
     render() {
